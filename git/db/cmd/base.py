@@ -750,9 +750,9 @@ class CmdHighLevelRepository(HighLevelRepository):
 							m = self.re_tab_full_line.search(line)
 							text,  = m.groups()
 							blames[-1][0] = c
-							blames[-1][1].append(text)
 							info = { 'id' : sha }
 						# END if we collected commit info
+						blames[-1][1].append(text)
 					# END distinguish filename,summary,rest
 				# END distinguish author|committer vs filename,summary,rest
 			# END distinguish hexsha vs other information
