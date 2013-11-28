@@ -70,9 +70,9 @@ class Diffable(object):
 		args.append( "--abbrev=40" )		# we need full shas
 		args.append( "--full-index" )		# get full index paths, not only filenames
 		
+		args.append("-M")				# check for renames
 		if create_patch:
 			args.append("-p")
-			args.append("-M")				# check for renames
 		else:
 			args.append("--raw")
 		
